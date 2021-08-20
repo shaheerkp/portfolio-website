@@ -1,0 +1,33 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#img {
+    height: 100%;
+    width: 100%;
+    
+}
+#service-img{
+    height: 20rem;
+    width: 50rem;
+}
+.social{
+    text-decoration: none;
+    color: rgb(242, 253, 253);
+}
+.custom-font-h3{
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.service-box-h4{
+    font-size:24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+
+}
+.service-img{
+    height:400px;
+    width:400px;
+}
+
