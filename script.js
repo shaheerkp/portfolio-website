@@ -91,14 +91,14 @@ u_email.addEventListener('input', (e) => {
 
 var u_number = document.getElementById("number")
 u_number.addEventListener('input', (e) => {
-    var number_field = /[^0-9.]/;
+    u_number.value = u_number.value.replace(/[^0-9]/, '').replace(/(\..*)\./, '$1');;
 
-    if (number_field.test(u_number.value)) {
-        number_err.innerHTML = "invalid format"
-        number_val = false;
+    // if (number_field.test(u_number.value)) {
+    //     number_err.innerHTML = "invalid format"
+    //     number_val = false;
 
-    }
-    else if (u_number.value.length != 10) {
+    // }
+    if (u_number.value.length != 10) {
         number_err.innerHTML = "Enter 10 numbers"
         number_val = false;
 
@@ -116,6 +116,7 @@ var u_message = document.getElementById("message")
 u_message.addEventListener('input', (e) => {
     if (u_message.value.length < 6) {
         message_err.innerHTML = "message should be atleast 5 character"
+
         message_val = false
     }
     else {
@@ -124,6 +125,12 @@ u_message.addEventListener('input', (e) => {
     }
 
 })
+
+
+
+$('.navbar-collapse a').click(function () {
+    $(".navbar-collapse").collapse('hide');
+});
 
 
 
@@ -155,7 +162,11 @@ $("#submit-form").submit((e) => {
     }
 
     else {
-        alert("Please fill all the fields correctly")
+        message_err.innerHTML = "message should be atleast 5 character"
+        number_err.innerHTML = "Enter 10 numbers"
+        email_err.innerHTML = "email should not be blank"
+        name_err.innerHTML = "User name should not start with space"
+
     }
 })
 
